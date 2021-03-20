@@ -1,0 +1,5 @@
+docker build -t mygui:v1 . 
+echo $DSIPLAY
+export DISPLAY=:0
+xhost +
+docker run -ti --rm -e DISPLAY=$DISPLAY-v /tmp/.X11-unix:/tmp/.X11-unix mygui:v1
